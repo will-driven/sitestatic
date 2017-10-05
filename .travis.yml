@@ -1,15 +1,6 @@
-language: ruby
-dist: trusty
-sudo: required
-rvm:
-- 2.3.3
+before_deploy:
+  pip install --user awscli
 deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: "staticsiteassets"
+  provider: script
+  script: aws s3 sync * s3://staticsiteassets --region=us-east-1 --delete
   skip_cleanup: true
-  local_dir: _site
-branches:
-  only:
-  - master
