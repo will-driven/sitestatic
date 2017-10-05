@@ -1,11 +1,7 @@
-language: ruby
-dist: trusty
-sudo: required
-rvm:
-- 2.3.3
-before_script:
-- chmod +x ./script/cibuild
-script: "./script/cibuild"
-branches:
-  only:
-  - master
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: "staticsiteassets"
+  skip_cleanup: true
+  local_dir: _site
