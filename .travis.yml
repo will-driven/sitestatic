@@ -1,6 +1,22 @@
-before_deploy:
-  pip install --user awscli
+language: python
+python:
+    - "2.7"
+cache: apt
+install:
+    - "sudo apt-get install pandoc"
+    - "pip install -r requirements.txt"
+
 deploy:
-  provider: script
-  script: aws s3 sync * s3://staticsiteassets --region=us-east-1 --delete
-  skip_cleanup: true
+    provider: s3
+    access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: staticsiteassets
+    endpoint: staticsiteassets.s3-website-us-east-1.amazonaws.com
+    region: us-east-1
+    skip_cleanup: true
+    local-dir: _site
+    acl: public_read
+    detect_encoding: true
+notifications:
+    email:
+        on_failure: always
