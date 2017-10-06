@@ -6,3 +6,6 @@ script:
   - aws s3 sync --acl public-read --sse --delete assets  s3://staticsiteassets
   - aws configure set preview.cloudfront true
   - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
+branches:
+  only: 
+    - master
