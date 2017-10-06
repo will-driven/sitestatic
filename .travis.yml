@@ -5,7 +5,7 @@ cache: apt
 install:
     - "sudo apt-get install pandoc"
     - "pip install -r requirements.txt"
-script: "pelican content/"
+
 deploy:
     provider: s3
     access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
@@ -14,7 +14,7 @@ deploy:
     endpoint: staticsiteassets.s3-website-us-east-1.amazonaws.com
     region: us-east-1
     skip_cleanup: true
-    local-dir: *
+    local-dir: _site
     acl: public_read
     detect_encoding: true
 notifications:
