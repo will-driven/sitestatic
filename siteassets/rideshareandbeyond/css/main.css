@@ -80,10 +80,9 @@ img::-moz-selection {
   color: white;
   background: transparent;
 }
-/* 
- .logo col-lg-3 {
+
+ /* .logo {
   padding-left: 0;
-  margin-left: 0;
 } */
 
 .disqus-comments {
