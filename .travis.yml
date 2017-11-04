@@ -4,8 +4,8 @@ python:
 install: pip install awscli
 script:
   - aws s3 sync --acl public-read --sse --delete siteassets  s3://staticsiteassets --cache-control max-age=604800
-  - aws configure set preview.cloudfront true
-  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
+  #- aws configure set preview.cloudfront true
+  #- aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
 branches:
   only: 
     - master
