@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
   <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
@@ -31,22 +33,22 @@
 
   
 
-  <link rel="apple-touch-icon" sizes="57x57" href="/favicons.ico/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/favicons.ico/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/favicons.ico/apple-icon-72x72.png">
+  <link rel="shortcut icon" href="{{ site.asset_host }}blog/img/favicons.ico/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.asset_host }}blog/img/favicons.ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="{{ site.asset_host }}blog/img/favicons.ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ site.asset_host }}blog/img/favicons.ico/apple-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="76x76" href="/favicons.ico/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/favicons.ico/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/favicons.ico/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/favicons.ico/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/favicons.ico/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicons.ico/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/favicons.ico/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicons.ico/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicons.ico/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicons.ico/favicon-16x16.png">
-<link rel="manifest" href="/favicons.ico/manifest.json">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ site.asset_host }}blog/img/favicons.ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ site.asset_host }}blog/img/favicons.ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ site.asset_host }}blog/img/favicons.ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ site.asset_host }}blog/img/favicons.ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.asset_host }}blog/img/favicons.ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="{{ site.asset_host }}blog/img/favicons.ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.asset_host }}blog/img/favicons.ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="{{ site.asset_host }}blog/img/favicons.ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.asset_host }}blog/img/favicons.ico/favicon-16x16.png">
 <meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/favicons.ico/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="{{ site.asset_host }}blog/img/favicons.ico/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
   
@@ -59,11 +61,11 @@
 
   
     
-      <link rel="stylesheet" href="https://d27rxt8egsjmle.cloudfront.net/blog/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="{{ site.asset_host }}blog/css/bootstrap.min.css" />
     
-      <link rel="stylesheet" href="https://d27rxt8egsjmle.cloudfront.net/blog/css/bootstrap-social.css" />
+      <link rel="stylesheet" href="{{ site.asset_host }}blog/css/bootstrap-social.css" />
     
-      <link rel="stylesheet" href="https://d27rxt8egsjmle.cloudfront.net/blog/css/main.css" />
+      <link rel="stylesheet" href="{{ site.asset_host }}blog/css/main.css" />
     
   
 
@@ -101,7 +103,7 @@
   
 
   
-  <meta property="og:image" content="https://d3u9etne7s6j1g.cloudfront.net/blog/img/avatar.png" />
+  <meta property="og:image" content="{{ site.asset_host }}blog/img/avatar.png" />
   
   
 
@@ -119,7 +121,7 @@
   
 
   
-  <meta name="twitter:image" content="https://d27rxt8egsjmle.cloudfront.net/blog/img/avatar.png" />
+  <meta name="twitter:image" content="{{ site.asset_host }}blog/img/avatar.png" />
   
 
 </head>
@@ -203,7 +205,7 @@
 	<div class="avatar-container">
 	  <div class="avatar-img-border">
 	    <a href="/">
-	      <img class="avatar-img" src="https://d3u9etne7s6j1g.cloudfront.net/blog/img/avatar.png" />
+	      <img class="avatar-img" src="{{ site.asset_host }}blog/img/{{ site.imgSize100 }}/avatar.png" />
 		</a>
 	  </div>
 	</div>
@@ -270,7 +272,7 @@
         
       </div>
       <div>
-        <img src="https://d3u9etne7s6j1g.cloudfront.net/blog/img/100x100/avatar.png" />
+        <img src="{{ site.asset_host }}blog/img/{{ site.imgSize100 }}/avatar.png" />
       </div>
     </div>
 
@@ -400,19 +402,19 @@
     
       <script>
       	if (typeof jQuery == 'undefined') {
-      	  document.write('<script src="https://d27rxt8egsjmle.cloudfront.net/blog/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	  document.write('<script src="{{ site.asset_host }}blog/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
       	}
       </script>
     
   
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
-	<script src="https://d27rxt8egsjmle.cloudfront.net/blog/js/bootstrap.min.js"></script>
+	<script src="{{ site.asset_host }}blog/js/bootstrap.min.js"></script>
     
   
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
-	<script src="https://d27rxt8egsjmle.cloudfront.net/blog/js/main.js"></script>
+	<script src="{{ site.asset_host }}blog/js/main.js"></script>
     
   
 

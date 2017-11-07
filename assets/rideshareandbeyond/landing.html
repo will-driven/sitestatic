@@ -1,31 +1,29 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free coming soon template with jQuery countdown">
-    <meta name="author" content="http://bootstraptaste.com">
+  <meta name="description" content="Coming soon!!!">
+    <meta name="author" content="Rideshare & Beyond" />
 
     <title>RideshareAndBeyond - A portal for all your ridesharing information</title>
 
+
+      
+ 
+
     <!-- Bootstrap -->
-    <link href="https://d3u9etne7s6j1g.cloudfront.net/rideshareandbeyond/css/bootstrap.css" rel="stylesheet">
-  	<link href="https://d3u9etne7s6j1g.cloudfront.net/rideshareandbeyond/css/bootstrap-theme.css" rel="stylesheet">
-    <!-- <link href="https://d3u9etne7s6j1g.cloudfront.net/rideshareandbeyond/css/font-awesome.css" rel="stylesheet"> -->
+    <link href="{{ site.asset_host }}rideshareandbeyond/css/bootstrap.css" rel="stylesheet">
+  	<link href="{{ site.asset_host }}rideshareandbeyond/css/bootstrap-theme.css" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
 
     <!-- siimple style -->
-    <link href="https://d3u9etne7s6j1g.cloudfront.net/base/css/base.css" rel="stylesheet">
-    <!-- <link href="../base/css/base.css" rel="stylesheet"> -->
-    <link href="https://d3u9etne7s6j1g.cloudfront.net/rideshareandbeyond/css/style.css" rel="stylesheet">
+    <link href="{{ site.asset_host }}base/css/base.css" rel="stylesheet">
+    <link href="{{ site.asset_host }}rideshareandbeyond/css/style.css" rel="stylesheet">
     
-    <!-- =======================================================
-        Theme Name: WeBuild
-        Theme URL: https://bootstrapmade.com/free-bootstrap-coming-soon-template-countdwon/
-        Author: BootstrapMade
-        Author URL: https://bootstrapmade.com
-    ======================================================= -->
   </head>
 
   <body>
@@ -38,88 +36,31 @@ gtag('js', new Date());
 
 gtag('config', 'UA-107828028-3');
 </script>
-	<div id="wrapper">
+	<div id="wrapper" style="background: url({{ site.asset_host }}rideshareandbeyond/img/main-bg.jpg);">
 		<div class="container">
-        
-       
 			<div class="row">
 				<div class="col-md-12">
            
 					<!--<h1>WeBuild</h1>-->
           <a href="#">
-          <img src="https://d3u9etne7s6j1g.cloudfront.net/rideshareandbeyond/img/logo.png">
+          <img src="{{ site.asset_host }}rideshareandbeyond/img/{{site.imgSize300}}/logo.png">
         </a>
 					<h2 class="subtitle">We're working hard to release the first version of this website and we'll be ready to launch soon</h2>
           <h1>Please check us back, Thanks!</h1>
           
-          <!--<div id="countdown"></div>-->
-					<!--<form class="form-inline signup" role="form">
-					  <div class="form-group">
-					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-					  </div>
-					  <button type="submit" class="btn btn-theme">Get notified!</button>
-					</form>		-->
-          
-          <!--<div class="social">
-              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-               <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-               <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-               <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-          </div>-->
         </div>
        
       </div>
       <div id="particles-js"></div>
-      <canvas class="particles-js-canvas-el" width="1903" height="539" style="width: 100%; height: 100%;"></canvas>
+      <canvas class="particles-js-canvas-el"  style="width: 100%; height: 100%;"></canvas>
      
-      
-      <!--<div class="row contctform">
-        <div class="col-md-8 col-md-offset-2">
-          <h3>Contact Us</h3>
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-        </div>
-        <form action="" method="post" role="form" class="contactForm">
-          <div class="col-md-4 col-md-offset-2">
-            <div class="form">
-                <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="form">
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
-                </div>
-                <div class="text-center"><button type="submit" class="btn btn-theme">Send Message</button></div>
-            </div>
-          </div>
-        </form>
-        
-      </div>-->
+     
       
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
 						<p class="copyright">&copy; RideshareAndBeyond - All Rights Reserved</p>
             <div class="credits">
-                <!-- 
-                  All the links in the footer should remain intact. 
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=WeBuild
-                -->
-                <!--<a href="https://bootstrapmade.com/">Free Bootstrap Themes</a> by BootstrapMade-->
+                
             </div>
 				</div>
       </div>		
@@ -128,19 +69,19 @@ gtag('config', 'UA-107828028-3');
   </div>
  
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="https://d3u9etne7s6j1g.cloudfront.net/rideshareandbeyond/js/bootstrap.min.js"></script>
-  <!-- <script src="https://d3u9etne7s6j1g.cloudfront.net/rideshareandbeyond/js/jquery.countdown.min.js"></script> -->
-  <script src="https://d3u9etne7s6j1g.cloudfront.net/base/js/particles.min.js"></script> -->
-  <script src="https://d3u9etne7s6j1g.cloudfront.net/base/js/app.js"></script>
-  <!-- <script src="../base/js/particles.min.js"></script>
-  <script src="../base/js/app.js"></script> -->
-	<script type="text/javascript">
+  <script src="{{ site.asset_host }}rideshareandbeyond/js/bootstrap.min.js"></script>
+  <script src="{{ site.asset_host }}rideshareandbeyond/js/test.js"></script>
+  
+  <script src="{{ site.asset_host }}base/js/particles.min.js"></script> -->
+  <script src="{{ site.asset_host }}base/js/app.js"></script>
+
+	<!-- <script type="text/javascript">
     $('#countdown').countdown('2019/01/01', function(event) {
       $(this).html(event.strftime('%w weeks %d days <br /> %H:%M:%S'));
     });
-  </script>
+  </script> -->
   
-  <!-- <script src="contactform/contactform.js"></script> -->
+
  <!-- Google Analytics -->
  <script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
