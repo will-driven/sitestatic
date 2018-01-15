@@ -35,6 +35,7 @@ blockquote {
 }
 blockquote p:first-child {
   margin-top: 0;
+  
 }
 hr.small {
   max-width: 100px;
