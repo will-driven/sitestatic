@@ -6,7 +6,7 @@ install:
   - pip install awscli
   - npm install
 script:
-  - npm run build
+  - npm build
   # - aws s3 sync --acl public-read  assets  s3://org-staticsiteassets --cache-control max-age=604800
   - aws s3 sync --acl public-read --sse --delete _site/assets  s3://org-staticsiteassets --cache-control max-age=604800
   #- aws configure set preview.cloudfront true
