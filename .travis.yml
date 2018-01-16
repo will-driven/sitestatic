@@ -1,6 +1,7 @@
 language: python
 python:
     - "2.7"
+jekyll build
 install: pip install awscli
 script:
   # - aws s3 sync --acl public-read  assets  s3://org-staticsiteassets --cache-control max-age=604800
