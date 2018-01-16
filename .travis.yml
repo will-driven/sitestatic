@@ -1,12 +1,12 @@
-language: python
-python:
-    - "2.7"
+language: ruby
+rvm:
+  - 2.3.3
 
 install: 
   - pip install awscli
   - npm install jekyll
 script:
-  - jekyll run build
+  - jekyll build
   # - aws s3 sync --acl public-read  assets  s3://org-staticsiteassets --cache-control max-age=604800
   #- aws s3 sync --acl public-read --sse --delete _site/assets  s3://org-staticsiteassets --cache-control max-age=604800
   #- aws configure set preview.cloudfront true
