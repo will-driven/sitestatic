@@ -1,0 +1,7 @@
+.small-top{ border-bottom: 0px solid #AF0707;float: left; width: 100%; background: #009999}
+.small-top .social-icon{float: right;}
+.small-top .social-icon a { color: #fff; float: left; padding: 6px 13px;}
+.small-top .social-icon a:last-child {border-right: 0x solid #fff;}
+.small-top .social-icon a:hover {color:#FD3A13; text-decoration: none;}
+.small-top .date-sec {font-size: 13px; font-weight: 600; float: left; margin-top: 4px; padding-left: 0; color: #898989}
+.particles-js-canvas-el {left: 0;position: absolute;top: 0;opacity:0.4;z-index:0;}
