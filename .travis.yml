@@ -1,29 +1,29 @@
-matrix:
-  include:
-    - language: python
-      python:
-            - "2.7"
-    - language: ruby
-      rvm:
-        - 2.3.3
-# language: python
-# python:
-#     - "2.7"
+# matrix:
+#   include:
+#     - language: python
+#       python:
+#             - "2.7"
+#     - language: ruby
+#       rvm:
+#         - 2.3.3
+language: python
+python:
+    - "2.7"
 # language: ruby
 # rvm:
 #   - "2.3.3"
 
 install: 
   - pip install awscli
-  - npm install jekyll
+  #- npm install jekyll
 script:
-  - jekyll build
-  # - aws s3 sync --acl public-read  assets  s3://org-staticsiteassets --cache-control max-age=604800
+  # - jekyll build
+  - aws s3 sync --acl public-read  assets  s3://org-staticsiteassets --cache-control max-age=604800
   #- aws s3 sync --acl public-read --sse --delete _site/assets  s3://org-staticsiteassets --cache-control max-age=604800
   #- aws configure set preview.cloudfront true
   #- aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths '/*'
 after_success:
-  - aws s3 sync --acl public-read --sse --delete _site/assets  s3://org-staticsiteassets --cache-control max-age=604800
+  # - aws s3 sync --acl public-read --sse --delete _site/assets  s3://org-staticsiteassets --cache-control max-age=604800
 branches:
   only: 
     - master
