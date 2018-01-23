@@ -132,8 +132,7 @@ form.signup input.form-control:focus {
 	text-align: center;
 	padding: 5% 0 0 0;
 	/* background: url(../img/landing.jpg); */
-  /* background-size: cover; */
-  background-repeat: repeat-y;
+  background-size: cover;
   height: 100%;
 }
 
