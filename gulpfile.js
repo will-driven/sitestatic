@@ -11,10 +11,10 @@ cp = require('child_process');
 
 // Set the path variables
 const base_path = './',
-src = base_path + '_dev/src',
+src = base_path + 'assets', //'_dev/src',
 dist = base_path + 'assets',
 paths = {  
-    js: src + '/js/*.js',
+    js: src + '/base/js/*.js',
     scss: [ src +'/sass/*.scss',
             src +'/sass/**/* .scss',
             src +'/sass/**/**/*.scss'],
@@ -35,6 +35,16 @@ return gulp.src(paths.scss)
 .pipe(rename({dirname: dist + '/css'}))
 .pipe(gulp.dest('./'));
 });
+
+// Version site assets
+gulp.task('versionfile', ['styles', 'scripts'], function () {
+  return gulp.src([src + '/*.css', scriptsDest + '/*.js'], { base: base })
+      .pipe(rev())
+      .pipe(gulp.dest(buildDest))  // write rev'd assets to build dir
+      .pipe(rev.manifest())
+      .pipe(gulp.dest(buildDest))  // write manifest to build dir
+});
+
 
 // Rebuild Jekyll
 gulp.task('build-jekyll', (code) => {
