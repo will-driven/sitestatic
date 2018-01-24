@@ -6,50 +6,129 @@ plumber = require('gulp-plumber'),
 rename = require('gulp-rename'),
 minifyCSS = require('gulp-clean-css'),
 prefixer = require('gulp-autoprefixer'),
+rev = require('gulp-rev'),
+revReplace = require('gulp-rev-replace'),
+imagemin = require('gulp-imagemin'),
+gulpif = require('gulp-if'),
+concat = require('gulp-concat'),
+uglify = require('gulp-uglify'),
+minify = require('gulp-minify'),
+cssminify = require('gulp-minify-css'),
+useref = require('gulp-useref'),
+browserSync  = require('browser-sync').create(),
 connect = require('gulp-connect');
 cp = require('child_process');
 
 // Set the path variables
 const base_path = './',
-src = base_path + 'assets', //'_dev/src',
+src = base_path + '_assets', //'_dev/src',
 dist = base_path + 'assets',
 paths = {  
-    js: src + '/base/js/*.js',
+    js: src + '/**/js/*.js',
+    css: src + '/**/css/*.css',
+    img: src + '/**/img/*',
+    html: [ src + '/*.html', src + '/**/*.html'],
+    htmldist: [ dist + '/*.html', src + '/**/*.html'],
+    copyfiles: [ src + '/**/img/*', src + '/**/img/favicons.ico/*', src + '/*.html', src + '/**/*.html'],
+    favicon: src + '/**/img/favicons.ico/*',
     scss: [ src +'/sass/*.scss',
             src +'/sass/**/* .scss',
             src +'/sass/**/**/*.scss'],
-    jekyll: ['index.html', '_posts/*', '_layouts/*', '_includes/*' , 'assets/*', 'assets/**/*']
+    jekyll: ['index.html', '_posts/*', '_layouts/*', '_includes/*' , '_assets/*', '_assets/**/*']
 };
 
 
-// Compile sass to css
-gulp.task('compile-sass', () => {  
-return gulp.src(paths.scss)
-.pipe(plumber((error) => {
-  gutil.log(gutil.colors.red(error.message));
-  gulp.task('compile-sass').emit('end');
-}))
-.pipe(sass())
-.pipe(prefixer('last 3 versions', 'ie 9'))
-.pipe(minifyCSS())
-.pipe(rename({dirname: dist + '/css'}))
-.pipe(gulp.dest('./'));
+// // Compile sass to css
+// gulp.task('compile-sass', () => {  
+// return gulp.src(paths.scss)
+// .pipe(plumber((error) => {
+//   gutil.log(gutil.colors.red(error.message));
+//   gulp.task('compile-sass').emit('end');
+// }))
+// .pipe(sass())
+// .pipe(prefixer('last 3 versions', 'ie 9'))
+// .pipe(minifyCSS())
+// .pipe(rename({dirname: dist + '/css'}))
+// .pipe(gulp.dest('./'));
+// });
+
+
+// // minify css files.
+// gulp.task('minify-css', function() {
+//   return gulp.src(paths.css)
+//       .pipe(cssminify())
+//       .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+//       .pipe(gulp.dest(dist))
+//       .pipe(browserSync.stream());
+// });
+
+// // uglify html files.
+// gulp.task('uglify-html', function() {
+//   return gulp.src(paths.html)
+//       .pipe(minify())
+//       .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+//       .pipe(gulp.dest(dist))
+//       .pipe(browserSync.stream());
+// });
+
+// Optimizes and copies image files.
+gulp.task('optimize-image', function() {
+  return gulp.src(paths.copyfiles)
+      //.pipe(imagemin())
+      .pipe(gulp.dest(dist))
+      .pipe(browserSync.stream());
 });
 
-// Version site assets
-gulp.task('versionfile', ['styles', 'scripts'], function () {
-  return gulp.src([src + '/*.css', scriptsDest + '/*.js'], { base: base })
+// revise site assets
+gulp.task('revision', function () {
+ // var manifest = gulp.src(dist + "/rev-manifest.json");
+  return gulp.src([paths.js, paths.css])
+      
       .pipe(rev())
-      .pipe(gulp.dest(buildDest))  // write rev'd assets to build dir
+     
+      //.pipe(minify())    
+      .pipe(gulpif('*.js', uglify()))
+      .pipe(gulpif('*.css', cssminify()))
+      // .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+      .pipe(gulp.dest(dist))  // write rev'd assets to build dir
       .pipe(rev.manifest())
-      .pipe(gulp.dest(buildDest))  // write manifest to build dir
+      .pipe(gulp.dest(dist))  // write manifest to build dir
+      //.pipe(gulpif('*.html', revReplace({manifest: manifest})))
+      //.pipe(gulp.dest(dist))
+      
 });
 
+
+
+//replace a hashed asset files names
+// gulp.task("revreplace", ['revision'], function() {
+//   var manifest = gulp.src(dist + "/rev-manifest.json");
+//   var source = paths.htmldist;
+//   //var outputFolderHtml = 'webapp/dist/somefolder';
+
+//   return gulp.src(src + '/rideshareandbeyond/landing.html')
+//       //.pipe(revreplace({manifest: manifest}))
+//       .pipe(revreplace({manifest: manifest, replaceInExtensions: ['.html']}))
+//       .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+//       .pipe(gulp.dest(dist));
+// });
+
+gulp.task("revreplace", ["revision"], function(){
+  var manifest = gulp.src(dist + "/rev-manifest.json");
+  //var userefassets = useref.assets();
+
+  return gulp.src(paths.html)
+    //.pipe(userefassets.restore())
+    //.pipe(useref())
+    .pipe(revReplace({manifest: manifest}))
+    .pipe(gulp.dest(dist));
+});
 
 // Rebuild Jekyll
 gulp.task('build-jekyll', (code) => {
-return cp.spawn('jekyll', ['build', '--incremental'], { stdio: 'inherit' }) // Adding incremental reduces build time.
-.on('error', (error) => gutil.log(gutil.colors.red(error.message)))
+return cp.spawn('jekyll.bat', ['build', '--incremental'], { stdio: 'inherit' }) // Adding incremental reduces build time.
+//.on('error', (error) => gutil.log(gutil.colors.red(error.message)))
+.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
 .on('close', code);
 })
 
@@ -63,9 +142,15 @@ port: 4000
 
 // Watch files
 gulp.task('watch', () => {  
-gulp.watch(paths.scss, ['compile-sass']);
+// gulp.watch(paths.scss, ['compile-sass']);
+
+//gulp.watch(paths.scss, ['minify-css']);
+//gulp.watch(paths.scss, ['uglify-html']);
+gulp.watch(paths.copyfiles, ['optimize-image']);
+gulp.watch([paths.js, paths.css], ['revision']);
+gulp.watch([paths.js, paths.css], ['revreplace']);
 gulp.watch(paths.jekyll, ['build-jekyll']);
 });
 
 // Start Everything with the default task
-gulp.task('default', [ 'compile-sass', 'build-jekyll', 'server', 'watch' ]);
+gulp.task('default', [ 'optimize-image', 'revision', 'revreplace', 'build-jekyll', 'server', 'watch' ]);

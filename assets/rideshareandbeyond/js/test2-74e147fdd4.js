@@ -1,0 +1,1 @@
+$(window).load(function(){var e=$("#myCarousel .carousel-inner").innerHeight(),o=$("#myCarousel .item").length,r=Math.round(e/o+1);$("#myCarousel .list-group-item").outerHeight(r)});
