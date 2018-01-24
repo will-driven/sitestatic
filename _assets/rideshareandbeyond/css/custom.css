@@ -39,13 +39,13 @@ max-width: 25%; height: 200px; align-items: center; justify-content: center;}
 .banner-sec .card-img-overlay{padding: 0; top: 3px; left: 7px; height: 20%}
 
 header{float: left; width:100%}
-.small-top{ border-bottom: 0px solid #2b2b2b;float: left; width: 100%; background: #009999}
+.small-top{ border-bottom: 0px solid #2b2b2b;float: left; width: 100%; background: #094654}
 .small-top .social-icon{float: right;}
 .small-top .social-icon a { color: #fff; float: left; padding: 6px 13px;}
 .small-top .social-icon a:last-child {border-right: 0x solid #fff;}
 .small-top .social-icon a:hover {color:#FD3A13; text-decoration: none;}
 .small-top .date-sec {font-size: 13px; font-weight: 600; float: left; margin-top: 4px; padding-left: 0; color: #898989}
-.top-head{background: #009999; width: 100%; float: left; height: 130px;}
+.top-head{background: #094654; width: 100%; float: left; height: 130px;}
 .top-head h1 {color: #fff; font-size: 36px; font-weight: 600; margin: 18px 0 0;}
 .top-head small{float: left; width: 100%; font-size: 14px; color: #c0c0c0; margin-top: 5px; margin-left: 5px;}
 .top-head .admin-bar {text-align: right; margin-top: 22px;}
@@ -142,7 +142,7 @@ header{float: left; width:100%}
 #myCarousel .list-group-item {border-radius:0px;	cursor:pointer;}
 #myCarousel .list-group-item:hover, #myCarousel .list-group-item:focus, #myCarousel .list-group .active {	background-color:#005689; color: #fff; border:1px solid #005689;}
 
-footer { background-color:#141517; width:100%; float: left; padding: 40px 0 20px}
+footer { background-color:#06282D; width:100%; float: left; padding: 40px 0 20px}
 footer .footer-ul { list-style-type:none;  padding-left:0px; margin-left:2px;}
 footer .footer-ul li { font-size:14px; margin-bottom: 10px;}
 footer .footer-ul li a { color:#a0a3a4; transition: color 0.2s linear 0s, background 0.2s linear 0s; }
