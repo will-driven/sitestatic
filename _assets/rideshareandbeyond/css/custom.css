@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5{
     font-family: 'Montserrat', sans-serif;
 }
 a, a:hover, .btn{outline:none!important;}
-.btn-search{background: #084251; border-color: #084251; color: #fff; padding: 7px 10px}
+.btn-search{background: #280851; border-color: #084251; color: #fff; padding: 7px 10px}
 .btn-search:hover{background: #084251; border-color: #084251}
 section{padding: 30px 0; float: left; width: 100%}
 .card{float: left; width:100%}
