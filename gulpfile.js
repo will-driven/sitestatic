@@ -83,7 +83,8 @@ gulp.task('optimize-image', function() {
 gulp.task('revision', function () {
  // var manifest = gulp.src(dist + "/rev-manifest.json");
   return gulp.src([paths.js, paths.css])
-      
+
+      //.pipe(gulpif('*.css', concat('all.css')))
       .pipe(rev())
      
       //.pipe(minify())    
