@@ -38,7 +38,7 @@ max-width: 25%; height: 200px; align-items: center; justify-content: center;}
 .banner-sec .card-img-overlay{padding: 0; top: 3px; left: 7px; height: 20%}
 
 header{float: left; width:100%}
-.small-top{ border-bottom: 0px solid #2b2b2b;float: left; width: 100%; background: #095437}
+.small-top{ border-bottom: 0px solid #2b2b2b;float: left; width: 100%; background: #541a09}
 .small-top .social-icon{float: right;}
 .small-top .social-icon a { color: #fff; float: left; padding: 6px 13px;}
 .small-top .social-icon a:last-child {border-right: 0x solid #fff;}
