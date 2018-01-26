@@ -16,7 +16,8 @@ minify = require('gulp-minify'),
 cssminify = require('gulp-minify-css'),
 useref = require('gulp-useref'),
 browserSync  = require('browser-sync').create(),
-connect = require('gulp-connect');
+connect = require('gulp-connect'),
+revDel = require('rev-del'),
 cp = require('child_process');
 
 // Set the path variables
@@ -93,6 +94,7 @@ gulp.task('revision', function () {
       // .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
       .pipe(gulp.dest(dist))  // write rev'd assets to build dir
       .pipe(rev.manifest())
+      .pipe(revDel({ dest: 'dist' })) 
       .pipe(gulp.dest(dist))  // write manifest to build dir
       //.pipe(gulpif('*.html', revReplace({manifest: manifest})))
       //.pipe(gulp.dest(dist))
