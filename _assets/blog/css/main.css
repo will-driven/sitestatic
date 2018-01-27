@@ -751,3 +751,10 @@ color: #f1c40f;
 .card-bg {
   background-color: #F5F5F5;
 }
+
+.loaders {width: 100%; box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: row; flex-wrap: wrap; }
+.loaders .loader {box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: column; flex-grow: 1; flex-shrink: 0; flex-basis: 25%;
+max-width: 25%; height: 200px; align-items: center; justify-content: center;}
+.loader{display: table; height: 100%; position: fixed; width: 100%; z-index: 1200;}
+.loader-bg{background: #fff}
+.loader-inner {display: table-cell; text-align: center; vertical-align: middle;}
