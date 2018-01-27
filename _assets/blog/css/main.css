@@ -3,14 +3,11 @@
 /* --- General --- */
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 18px;
   color: #404040;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 22px;
-  letter-spacing: .4px;
-  background: #eee;
-  padding-top: 30px;
+  position: relative;
+  background: #FFF;
 }
 p {
   line-height: 1.5;
@@ -759,6 +756,15 @@ color: #f1c40f;
   position: relative;
   margin-bottom: 50px;
   transition: all .2s ease-in-out;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #404040;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: .4px;
+  background: #eee;
+  padding-top: 30px;
 }
 
 .card:hover {
