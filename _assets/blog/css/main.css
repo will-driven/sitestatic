@@ -825,6 +825,27 @@ color: #f1c40f;
 	transform: rotate(90deg);
 }
 
+.date {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #77d7b9;
+  color: #fff;
+  padding: 0.8em;
+}
+.day {
+  font-weight: 700;
+  font-size: 24px;
+  text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18);
+}
+
+.month {
+  text-transform: uppercase;
+}
+.year {
+  font-size: 12px;
+}
+
 .loaders {width: 100%; box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: row; flex-wrap: wrap; }
 .loaders .loader {box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: column; flex-grow: 1; flex-shrink: 0; flex-basis: 25%;
 max-width: 25%; height: 200px; align-items: center; justify-content: center;}
