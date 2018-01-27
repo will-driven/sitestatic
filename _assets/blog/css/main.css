@@ -748,8 +748,6 @@ color: #f1c40f;
 .gist, .gist-file table tr td {
   border: unset;
 }
-.material-cover {
-  height: 200px;
-  margin-bottom: 0;
-  position: relative;
+.card-bg {
+  background-color: #EBEBEB;
 }
