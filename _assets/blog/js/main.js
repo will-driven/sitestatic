@@ -136,3 +136,10 @@ var main = {
 // 2fc73a3a967e97599c9763d05e564189
 
 document.addEventListener('DOMContentLoaded', main.init);
+
+if ((".loader").length) {
+  // show Preloader until the website ist loaded
+  $(window).on('load', function () {
+    $(".loader").fadeOut("slow");
+  });
+}
