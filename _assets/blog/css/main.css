@@ -778,6 +778,11 @@ color: #f1c40f;
   padding: 12px 30px;
   border-top: 1px solid #ddd;
   background-color: #fff;
+  
+}
+.card-footer a {
+  color: #999999;
+  text-decoration: none;
 }
 
 .image {
