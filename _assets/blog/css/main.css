@@ -775,6 +775,7 @@ color: #f1c40f;
 .card-footer {
   padding: 12px 30px;
   border-top: 1px solid #ddd;
+  background-color: #fff;
 }
 
 .image {
