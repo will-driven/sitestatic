@@ -785,6 +785,9 @@ color: #f1c40f;
   color: #999999;
   text-decoration: none;
 }
+.card-comment {
+  float: right;
+}
 
 .image {
   height: 200px;
