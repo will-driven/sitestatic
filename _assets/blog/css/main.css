@@ -773,6 +773,8 @@ color: #f1c40f;
   margin-bottom: 24px;
 }
 .card-footer {
+  color: #999999;
+  text-decoration: none;
   padding: 12px 30px;
   border-top: 1px solid #ddd;
   background-color: #fff;
