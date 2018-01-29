@@ -880,6 +880,12 @@ color: #f1c40f;
   letter-spacing: -.003em;
 }
 
+.stick {
+  position: fixed;
+  top: 300px;
+  z-index: 9999;
+}
+
 .loaders {width: 100%; box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: row; flex-wrap: wrap; }
 .loaders .loader {box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: column; flex-grow: 1; flex-shrink: 0; flex-basis: 25%;
 max-width: 25%; height: 200px; align-items: center; justify-content: center;}

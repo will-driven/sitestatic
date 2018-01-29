@@ -143,3 +143,17 @@ if ((".loader").length) {
     $(".loader").fadeOut("slow");
   });
 }
+
+function stick_social() {
+  var window_top = $(window).scrollTop();
+  if (window_top > 300) {
+      $('.articleLeft').addClass('stick');
+  } else {
+      $('.articleLeft').removeClass('stick');
+  }
+}
+
+$(function () {
+  $(window).scroll(stick_social);
+  stick_social();
+});
