@@ -880,10 +880,26 @@ color: #f1c40f;
   letter-spacing: -.003em;
 }
 
-.stick {
-  position: fixed;
-  top: 300px;
-  z-index: 9999;
+.social-share {
+  padding: 20px;
+  width: 170px;
+  background-color: #434A54;
+  color: #fff;
+}
+.social-share h3 {
+  margin: 0;
+}
+.content,
+.social-share {
+  float: left;
+}
+
+
+/* The sticky */
+.social-share {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px;
 }
 
 .loaders {width: 100%; box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: row; flex-wrap: wrap; }
