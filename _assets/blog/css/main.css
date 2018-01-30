@@ -930,6 +930,8 @@ color: #f1c40f;
   width: 170px;
   background-color: #434A54;
   color: #fff;
+  text-align: center!important;
+  padding-top: 100px;
 }
 .sidebar h3 {
   margin: 0;
@@ -939,6 +941,9 @@ color: #f1c40f;
   float: left;
 }
 
+.sidebar .button {
+  -webkit-appearance: media-enter-fullscreen-button;
+}
 
 /* The sticky */
 .sidebar {
