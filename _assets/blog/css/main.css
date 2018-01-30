@@ -928,7 +928,7 @@ color: #f1c40f;
 .sidebar {
   padding: 20px;
   width: 170px;
-  background-color: #434A54;
+  /* background-color: #434A54; */
   color: #fff;
   text-align: center!important;
   padding-top: 100px;
@@ -943,6 +943,7 @@ color: #f1c40f;
 
 .sidebar .button {
   -webkit-appearance: media-enter-fullscreen-button;
+  -moz-appearance: menuradio;
 }
 
 /* The sticky */
