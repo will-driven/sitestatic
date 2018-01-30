@@ -143,3 +143,4 @@ if ((".loader").length) {
     $(".loader").fadeOut("slow");
   });
 }
+
