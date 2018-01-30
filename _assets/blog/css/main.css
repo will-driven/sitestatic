@@ -881,26 +881,17 @@ color: #f1c40f;
 }
 
 .social-share {
-  padding: 20px;
-  width: 170px;
-  background-color: #434A54;
-  color: #fff;
-}
-.social-share h3 {
-  margin: 0;
-}
-.content,
-.social-share {
+  width: 300px;
   float: left;
+  border: 2px solid orange;
+  height: 400px;
 }
 
+/* top margin on sidebar needed for JS to parse */
+.social-share, .post-content {  margin-top: 20px; }
 
-/* The sticky */
-.social-share {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 15px;
-}
+/* fixed sidebar applied dynamtically with JS */ 
+.fixed {  position: fixed; top: 0; }
 
 .loaders {width: 100%; box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: row; flex-wrap: wrap; }
 .loaders .loader {box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: column; flex-grow: 1; flex-shrink: 0; flex-basis: 25%;

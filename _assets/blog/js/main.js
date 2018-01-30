@@ -143,3 +143,18 @@ if ((".loader").length) {
     $(".loader").fadeOut("slow");
   });
 }
+
+
+$(function () {
+  var socialshare = $('.social-share');
+  var top = socialshare.offset().top - parseFloat(socialshare.css('margin-top'));
+
+  $(window).scroll(function (event) {
+    var y = $(this).scrollTop();
+    if (y >= top) {
+      socialshare.addClass('fixed');
+    } else {
+      socialshare.removeClass('fixed');
+    }
+  });
+});
