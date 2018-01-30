@@ -881,7 +881,7 @@ color: #f1c40f;
 }
 
 .social-share {
-  width: 200px;
+  /* width: 200px; */
   float: left;
   border: 2px solid orange;
   height: 400px;
