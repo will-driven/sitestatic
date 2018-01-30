@@ -143,8 +143,3 @@ if ((".loader").length) {
     $(".loader").fadeOut("slow");
   });
 }
-
-$('#sidebar').stickySidebar({
-  topSpacing: 60,
-  bottomSpacing: 60
-});
