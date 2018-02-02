@@ -957,17 +957,13 @@ color: #f1c40f;
 }
 
 .post-img-container {
-
-  font-size: 11px;
-  color: #EEE;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
+  position: relative;
 }
 .post-img-container .img-desc {
   background: rgba(30, 30, 30, 0.6);
   position: absolute;
   padding: 5px 10px;
-  font-size: 11px;
+  font-size: 10px;
   color: #EEE;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   right: 0;
