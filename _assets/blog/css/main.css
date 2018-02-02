@@ -970,6 +970,9 @@ color: #f1c40f;
   bottom: 0;
   display: none;
 }
+.img-desc a {
+  text-decoration: none;
+}
 
 .loaders {width: 100%; box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: row; flex-wrap: wrap; }
 .loaders .loader {box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: column; flex-grow: 1; flex-shrink: 0; flex-basis: 25%;
