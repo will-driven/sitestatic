@@ -956,7 +956,14 @@ color: #f1c40f;
   top: 15px;
 }
 
-.img-desc {
+.post-img-container {
+
+  font-size: 11px;
+  color: #EEE;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+.post-img-container .img-desc {
   background: rgba(30, 30, 30, 0.6);
   position: absolute;
   padding: 5px 10px;
