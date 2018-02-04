@@ -978,6 +978,7 @@ color: #f1c40f;
 .post-title {
   margin-bottom: 30px;
   margin-top: 0px;
+  letter-spacing: -.015em;
 }
 
 .loaders {width: 100%; box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: row; flex-wrap: wrap; }
