@@ -975,6 +975,11 @@ color: #f1c40f;
   text-decoration: none;
 }
 
+.post-title {
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
 .loaders {width: 100%; box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: row; flex-wrap: wrap; }
 .loaders .loader {box-sizing: border-box; display: flex; flex: 0 1 auto; flex-direction: column; flex-grow: 1; flex-shrink: 0; flex-basis: 25%;
 max-width: 25%; height: 200px; align-items: center; justify-content: center;}
