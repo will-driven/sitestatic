@@ -26,6 +26,7 @@ const base_path = './',
 src = base_path + '_assets', //'_dev/src',
 dist = base_path + 'assets',
 blog_main = 'Z:/mesfinmoges On My Mac/Projects/blogs/Personal',
+rsb_main = 'Z:/mesfinmoges On My Mac/Projects/blogs/RideshareandBeyond',
 paths = {  
     js: src + '/**/js/*.js',
     css: src + '/**/css/*.css',
@@ -141,6 +142,18 @@ gulp.task("revreplace_blog", ["revision"], function(){
       //.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); });
   });
 
+  gulp.task("revreplace_rsb", ["revision"], function(){
+    var manifest = gulp.src(dist + "/rev-manifest.json");
+    //var userefassets = useref.assets();
+  
+    return gulp.src(rsb_main + '/_assets/base.html')
+      //.pipe(userefassets.restore())
+      //.pipe(useref())
+      .pipe(revReplace({manifest: manifest}))
+      .pipe(gulp.dest(rsb_main + '/_layouts'));
+      //.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); });
+  });
+
 // Rebuild Jekyll
 gulp.task('build-jekyll', (code) => {
 return cp.spawn('jekyll.bat', ['build', '--incremental'], { stdio: 'inherit' }) // Adding incremental reduces build time.
@@ -167,8 +180,9 @@ gulp.watch(paths.copyfiles, ['optimize-image']);
 gulp.watch([paths.js, paths.css], ['revision']);
 gulp.watch([paths.js, paths.css], ['revreplace']);
 gulp.watch([paths.js, paths.css], ['revreplace_blog']);
+gulp.watch([paths.js, paths.css], ['revreplace_rsb']);
 gulp.watch(paths.jekyll, ['build-jekyll']);
 });
 
 // Start Everything with the default task
-gulp.task('default', [ 'optimize-image', 'revision', 'revreplace','revreplace_blog', 'build-jekyll', 'server', 'watch' ]);
+gulp.task('default', [ 'optimize-image', 'revision', 'revreplace','revreplace_blog', 'revreplace_rsb','build-jekyll', 'server', 'watch' ]);

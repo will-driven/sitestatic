@@ -24,18 +24,18 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
-asset_host: "https://d3u9etne7s6j1g.cloudfront.net/"
-imgSize600: 600x600
-imgSize400: 400x400
-imgSize300: 300x300
-imgSize200: 200x200
-imgSize100: 100x100
+asset_host: "/assets/" #"https://d3u9etne7s6j1g.cloudfront.net/"
+# imgSize600: 600x600
+# imgSize400: 400x400
+# imgSize300: 300x300
+# imgSize200: 200x200
+# imgSize100: 100x100
 # asset_host: "http://127.0.0.1:4000/static/assets/"
-# imgSize600: ""
-# imgSize400: ""
-# imgSize300: ""
-# imgSize200: ""
-# imgSize100: ""
+imgSize600: ""
+imgSize400: ""
+imgSize300: ""
+imgSize200: ""
+imgSize100: ""
 
 # Build settings
 markdown: kramdown

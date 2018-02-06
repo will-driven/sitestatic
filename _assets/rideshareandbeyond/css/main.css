@@ -190,7 +190,7 @@ img::-moz-selection {
 .top-nav-fixed {
 	position: fixed; 
 	top: 0; 
-	height: 70px; 
+	height: 45px; 
 	z-index: 1;
 }
 
