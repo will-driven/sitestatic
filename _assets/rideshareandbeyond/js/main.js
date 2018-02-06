@@ -9,9 +9,9 @@ var main = {
     // Shorten the navbar after scrolling a little bit down
     $(window).scroll(function() {
         if ($(".navbar").offset().top > 150) {
-            $(".navbar").addClass("top-nav-fixed");
+            $(".navbar").addClass("top-nav-short");
         } else {
-            $(".navbar").removeClass("top-nav-fixed");
+            $(".navbar").removeClass("top-nav-short");
         }
     });
     
