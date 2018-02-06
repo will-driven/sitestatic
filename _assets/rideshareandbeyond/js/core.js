@@ -46,15 +46,15 @@ $('#Date').html(dayNames[newDate.getDay()] + ", " + newDate.getDate() + ' ' + mo
       });
 	}
 	
-document.addEventListener('DOMContentLoaded', main.init);
-$(document).ready(function(){
-  $(window).bind('scroll', function() {
-  var navHeight = $( window ).height() - 70;
-    if ($(window).scrollTop() > navHeight) {
-      $('.top-nav').addClass('top-nav-fixed');
-    }
-    else {
-      $('.top-nav').removeClass('top-nav-fixed');
-    }
- });
-});
+// document.addEventListener('DOMContentLoaded', main.init);
+// $(document).ready(function(){
+//   $(window).bind('scroll', function() {
+//   var navHeight = $( window ).height() - 70;
+//     if ($(window).scrollTop() > navHeight) {
+//       $('.top-nav').addClass('top-nav-fixed');
+//     }
+//     else {
+//       $('.top-nav').removeClass('top-nav-fixed');
+//     }
+//  });
+// });
