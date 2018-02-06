@@ -8,8 +8,8 @@ var main = {
   init : function() {
     // Shorten the navbar after scrolling a little bit down
     $(window).scroll(function() {
-        var navHeight = $( window ).height() - 70;
-        if ($(".navbar").scrollTop().top > navHeight) {
+        var hdr = $('top-head').height();
+        if ($(".navbar").scrollTop().top > hdr) {
             $(".navbar").addClass("top-nav-fixed");
         } else {
             $(".navbar").removeClass("top-nav-fixed");
