@@ -133,17 +133,3 @@ var main = {
   }
 };
 
-// 2fc73a3a967e97599c9763d05e564189
-
-document.addEventListener('DOMContentLoaded', main.init);
-$(document).ready(function(){
-  $(window).bind('scroll', function() {
-  var navHeight = $( window ).height() - 70;
-    if ($(window).scrollTop() > navHeight) {
-      $('nav').addClass('fixed');
-    }
-    else {
-      $('nav').removeClass('fixed');
-    }
- });
-});
