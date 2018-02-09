@@ -11,6 +11,7 @@
   "base/js/jquery-1.11.2.min.js": "base/js/jquery-1-9aecea3830.11.2.min.js",
   "base/js/jquery-3.3.1.min.js": "base/js/jquery-3-a09e13ee94.3.1.min.js",
   "base/js/particles.min.js": "base/js/particles-08bd8ed926.min.js",
+  "base/js/tether.min.js": "base/js/tether-df4c4d96cf.min.js",
   "blog/css/main.css": "blog/css/main-c488d8a3e3.css",
   "blog/css/pygment_highlights.css": "blog/css/pygment_highlights-ac0cb69dc1.css",
   "blog/js/main.js": "blog/js/main-dbe686b756.js",
@@ -35,7 +36,6 @@
   "cleaneatingforlife/js/main.js": "cleaneatingforlife/js/main-9b93a7cc93.js",
   "cleaneatingforlife/js/site.min.js": "cleaneatingforlife/js/site-d41d8cd98f.min.js",
   "rideshareandbeyond/css/custom.css": "rideshareandbeyond/css/custom-677e0391c6.css",
-  "rideshareandbeyond/css/font-awesome.min.css": "rideshareandbeyond/css/font-awesome-f667e6132f.min.css",
   "rideshareandbeyond/css/lightbox.min.css": "rideshareandbeyond/css/lightbox-60b6d81dca.min.css",
   "rideshareandbeyond/css/loaders.css": "rideshareandbeyond/css/loaders-763c85892b.css",
   "rideshareandbeyond/css/main-minimal.css": "rideshareandbeyond/css/main-minimal-b84f77cd0b.css",
@@ -49,6 +49,5 @@
   "rideshareandbeyond/js/ie10-viewport-bug-workaround.js": "rideshareandbeyond/js/ie10-viewport-bug-workaround-186770c58c.js",
   "rideshareandbeyond/js/jquery.min.js": "rideshareandbeyond/js/jquery-8e67452f56.min.js",
   "rideshareandbeyond/js/lightbox-plus-jquery.min.js": "rideshareandbeyond/js/lightbox-plus-jquery-006e1b760a.min.js",
-  "rideshareandbeyond/js/main.js": "rideshareandbeyond/js/main-dbb26d21ec.js",
-  "rideshareandbeyond/js/npm.js": "rideshareandbeyond/js/npm-9ec191bedb.js"
+  "rideshareandbeyond/js/main.js": "rideshareandbeyond/js/main-dbb26d21ec.js"
 }
