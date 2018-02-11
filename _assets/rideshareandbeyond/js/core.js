@@ -41,7 +41,9 @@ $('#Date').html(dayNames[newDate.getDay()] + ", " + newDate.getDate() + ' ' + mo
 
  if ((".loader").length) {
       // show Preloader until the website ist loaded
-      $(window).on('load', function () {
-        $(".loader").fadeOut("slow");
-      });
-    }
+	$(window).on('load', function () {
+	$(".loader").fadeOut("slow");
+	});
+}
+
+document.addEventListener('DOMContentLoaded', main.init);

@@ -7,13 +7,33 @@ var main = {
 
   init : function() {
     // Shorten the navbar after scrolling a little bit down
+    // $(window).scroll(function() {
+    //     if ($(".navbar").offset().top > 150) {
+    //         $(".navbar").addClass("top-nav-short");
+    //     } else {
+    //         $(".navbar").removeClass("top-nav-short");
+    //     }
+    // });
+
     $(window).scroll(function() {
-        if ($(".navbar").offset().top > 150) {
-            $(".navbar").addClass("top-nav-short");
-        } else {
-            $(".navbar").removeClass("top-nav-short");
-        }
-    });
+      if( $(this).scrollTop() > 160) {
+          $(".navbar").addClass("top-nav-fixed");
+          $('section.banner-sec').css({"padding":"75px"});
+          $(".top-nav").css({"background": "#094654"});
+          $(".top-nav li a").css({"color": "#fff"});
+          $('#sticky-logo').show();
+          // $(".top-nav li a").css({"border-bottom": "#094654"});
+
+      } else {
+          $(".navbar").removeClass("top-nav-fixed");
+          $('section.banner-sec').css({"padding":"30px"});
+          $(".top-nav").css({"background": "#fff"});
+          $(".top-nav li a").css({"color": "#000"});
+          $('#sticky-logo').hide();
+          // $(".top-nav li a").css({"border-bottom": "#fff"});
+
+      }
+  });
     
     // On mobile, hide the avatar when expanding the navbar menu
     $('#main-navbar').on('show.bs.collapse', function () {
