@@ -75,13 +75,13 @@ paths = {
 //       .pipe(browserSync.stream());
 // });
 
-// Optimizes and copies image files.
-gulp.task('optimize-image', function() {
-  return gulp.src(paths.copyfiles)
-      //.pipe(imagemin())
-      .pipe(gulp.dest(dist))
-      .pipe(browserSync.stream());
-});
+// // Optimizes and copies image files.
+// gulp.task('optimize-image', function() {
+//   return gulp.src(paths.copyfiles)
+//       //.pipe(imagemin())
+//       .pipe(gulp.dest(dist))
+//       .pipe(browserSync.stream());
+// });
 
 // revise site assets
 gulp.task('revision', function () {
@@ -176,7 +176,7 @@ gulp.task('watch', () => {
 
 //gulp.watch(paths.scss, ['minify-css']);
 //gulp.watch(paths.scss, ['uglify-html']);
-gulp.watch(paths.copyfiles, ['optimize-image']);
+// gulp.watch(paths.copyfiles, ['optimize-image']);
 gulp.watch([paths.js, paths.css], ['revision']);
 gulp.watch([paths.js, paths.css], ['revreplace']);
 gulp.watch([paths.js, paths.css], ['revreplace_blog']);
@@ -185,4 +185,4 @@ gulp.watch(paths.jekyll, ['build-jekyll']);
 });
 
 // Start Everything with the default task
-gulp.task('default', [ 'optimize-image', 'revision', 'revreplace','revreplace_blog', 'revreplace_rsb','build-jekyll', 'server', 'watch' ]);
+gulp.task('default', [ 'revision', 'revreplace','revreplace_blog', 'revreplace_rsb','build-jekyll', 'server', 'watch' ]);
