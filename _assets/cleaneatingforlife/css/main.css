@@ -7346,22 +7346,7 @@ hr.hr-home {
  filter:alpha(opacity=97)
 }
 
-.fet-content {
-    margin-top: 80px;
-}
 
-.heading-small {
-    margin: 7px 0 0;
-    padding-bottom: 10px;
-    font-size: 18px;
-    border-top: 2px solid #222;
-    float: left;
-    /* width: 100%; */
-    color: #222;
-    margin-top: 40px;
-    /* margin-bottom: 10px; */
-    line-height: 2;
-}
 
 .resources .page-header {
  padding-top:69px
@@ -7598,4 +7583,54 @@ footer .footer-social ul.list-inline li.social-google-plus a:hover {
 footer .footer-main {
  padding:50px 0;
  text-align:center
+}
+
+
+.nav-space {
+    margin-top: 160px;
+}
+
+@media(min-width:1200px) {
+    .nav-space {
+        margin-top: 110px;
+    }
+}
+
+
+@media(max-width:992px) {
+    .nav-space {
+        margin-top: 120px;
+    }
+}
+
+@media(min-width:768px) {
+    .nav-space {
+        margin-top: 130px;
+    }
+}
+
+
+
+@media(max-width:576px) {
+    .nav-space {
+        margin-top: 140px;
+    }
+}
+
+
+.fet-content {
+    margin-top: 20px;
+}
+
+.heading-small {
+    /* margin: 160px 0 0; */
+    padding-bottom: 10px;
+    font-size: 18px;
+    border-top: 2px solid #222;
+    float: left;
+    /* width: 100%; */
+    color: #222;
+    /* margin-top: 40px; */
+    /* margin-bottom: 10px; */
+    line-height: 2;
 }
