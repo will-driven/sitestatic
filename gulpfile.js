@@ -19,6 +19,7 @@ useref = require('gulp-useref'),
 browserSync  = require('browser-sync').create(),
 connect = require('gulp-connect'),
 revDel = require('rev-del'),
+del = require('del'),
 cp = require('child_process');
 
 // Set the path variables
@@ -27,6 +28,8 @@ src = base_path + '_assets', //'_dev/src',
 dist = base_path + 'assets',
 blog_main = 'Z:/mesfinmoges On My Mac/Projects/blogs/Personal',
 rsb_main = 'Z:/mesfinmoges On My Mac/Projects/blogs/RideshareandBeyond',
+ce_main = 'Z:/mesfinmoges On My Mac/Projects/blogs/blog.cleaneatingforlife',
+
 paths = {  
     js: src + '/**/js/*.js',
     css: src + '/**/css/*.css',
@@ -74,17 +77,25 @@ paths = {
 //       .pipe(gulp.dest(dist))
 //       .pipe(browserSync.stream());
 // });
+gulp.task('clean-scripts', function () {
+  return del.sync([dist + '/*']);
+});
 
-// // Optimizes and copies image files.
-// gulp.task('optimize-image', function() {
-//   return gulp.src(paths.copyfiles)
-//       //.pipe(imagemin())
-//       .pipe(gulp.dest(dist))
-//       .pipe(browserSync.stream());
+// gulp.task('clean-scripts', function () {
+//   return gulp.src(dist, {read: false})
+//       .pipe(clean());
 // });
 
+// Optimizes and copies image files.
+gulp.task('optimize-image', ['clean-scripts'], function() {
+  return gulp.src(paths.copyfiles)
+      //.pipe(imagemin())
+      .pipe(gulp.dest(dist))
+      .pipe(browserSync.stream());
+});
+
 // revise site assets
-gulp.task('revision', function () {
+gulp.task('revision', ['clean-scripts'], function () {
  // var manifest = gulp.src(dist + "/rev-manifest.json");
   return gulp.src([paths.js, paths.css])
 
@@ -154,8 +165,20 @@ gulp.task("revreplace_blog", ["revision"], function(){
       //.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); });
   });
 
+  gulp.task("revreplace_ce", ["revision"], function(){
+    var manifest = gulp.src(dist + "/rev-manifest.json");
+    //var userefassets = useref.assets();
+  
+    return gulp.src(ce_main + '/_assets/base.html')
+      //.pipe(userefassets.restore())
+      //.pipe(useref())
+      .pipe(revReplace({manifest: manifest}))
+      .pipe(gulp.dest(ce_main + '/_layouts'));
+      //.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); });
+  });
+
 // Rebuild Jekyll
-gulp.task('build-jekyll', (code) => {
+gulp.task('build-jekyll', ['revreplace'], (code) => {
 return cp.spawn('jekyll.bat', ['build', '--incremental'], { stdio: 'inherit' }) // Adding incremental reduces build time.
 //.on('error', (error) => gutil.log(gutil.colors.red(error.message)))
 .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
@@ -176,13 +199,15 @@ gulp.task('watch', () => {
 
 //gulp.watch(paths.scss, ['minify-css']);
 //gulp.watch(paths.scss, ['uglify-html']);
-// gulp.watch(paths.copyfiles, ['optimize-image']);
+gulp.watch(src, ['clean-scripts']);
+gulp.watch(paths.copyfiles, ['optimize-image']);
 gulp.watch([paths.js, paths.css], ['revision']);
 gulp.watch([paths.js, paths.css], ['revreplace']);
 gulp.watch([paths.js, paths.css], ['revreplace_blog']);
 gulp.watch([paths.js, paths.css], ['revreplace_rsb']);
+gulp.watch([paths.js, paths.css], ['revreplace_ce']);
 gulp.watch(paths.jekyll, ['build-jekyll']);
 });
 
 // Start Everything with the default task
-gulp.task('default', [ 'revision', 'revreplace','revreplace_blog', 'revreplace_rsb','build-jekyll', 'server', 'watch' ]);
+gulp.task('default', ['clean-scripts','optimize-image', 'revision', 'revreplace','revreplace_blog', 'revreplace_rsb','revreplace_ce','build-jekyll', 'server', 'watch' ]);

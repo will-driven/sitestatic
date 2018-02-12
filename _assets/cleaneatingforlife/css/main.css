@@ -2738,6 +2738,8 @@ tbody.collapse.show {
 .nav-link.disabled {
  color:#6c757d
 }
+
+
 .nav-tabs {
  border-bottom:1px solid #dee2e6
 }
@@ -2789,6 +2791,9 @@ tbody.collapse.show {
 .tab-content>.active {
  display:block
 }
+
+.media-left img{width: 100px}
+
 .navbar {
  position:relative;
  display:flex;
@@ -2797,6 +2802,9 @@ tbody.collapse.show {
  justify-content:space-between;
  padding:.5rem 1rem
 }
+.navbar li a{color: #141517; font-size: 14px; font-weight: 700; padding: 0 10px; border-bottom: 2px solid #fff}
+.navbar li a:hover, .navbar li a:focus, .navbar li.active a{color: #639A3A; border-bottom: 2px solid #639A3A }
+
 .navbar>.container,.navbar>.container-fluid {
  display:flex;
  flex-wrap:wrap;
@@ -7337,6 +7345,24 @@ hr.hr-home {
  opacity:.97;
  filter:alpha(opacity=97)
 }
+
+.fet-content {
+    margin-top: 80px;
+}
+
+.heading-small {
+    margin: 7px 0 0;
+    padding-bottom: 10px;
+    font-size: 18px;
+    border-top: 2px solid #222;
+    float: left;
+    /* width: 100%; */
+    color: #222;
+    margin-top: 40px;
+    /* margin-bottom: 10px; */
+    line-height: 2;
+}
+
 .resources .page-header {
  padding-top:69px
 }
