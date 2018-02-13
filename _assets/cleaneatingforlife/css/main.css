@@ -7753,4 +7753,41 @@ footer .footer-main {
     line-height: 1.58;
     letter-spacing: -.003em;
   }
-  
+
+.featured-overlay {
+    /* background-color: #F3A847; */
+    color: #fff;
+    padding: 0.8em;
+    display: none;
+    background: rgba(0,0,0,0.5);
+}
+
+@media (min-width: 1024px) {
+    .featured-overlay {
+        display: block;
+        position: absolute;
+        top: 100;
+        left: 20;
+    }
+}
+@media(min-width:1024px) and (max-width:1269px){
+	.featured-overlay{width:400px}
+}
+
+@media(min-width:1270px){
+	.featured-overlay{width:450px}
+}
+
+.featured-overlay-bottom {
+    margin-top: 6px;
+    padding: 16px 10px 30px;
+    display: block;
+    float: left;
+    width: 100%;
+    background-color: #f8f8f8;
+  }
+@media(min-width:1024px){
+	.featured-overlay-bottom{display:none}
+}
+
+
