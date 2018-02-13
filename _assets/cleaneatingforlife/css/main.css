@@ -7756,21 +7756,23 @@ footer .footer-main {
 .featured-content-container {
     width: 100%;
 }
+.featured-content-container img {
+    width: 100%;
+}
 .featured-overlay {
     /* background-color: #F3A847; */
     color: #fff;
     padding: 0.8em;
     display: none;
     background: rgba(0,0,0,0.5);
-    top: 100;
-    left: 20;
 }
 
 @media (min-width: 1024px) {
     .featured-overlay {
         display: block;
         position: absolute;
-        
+        top: 100px;
+        left: 20px;
     }
 }
 @media(min-width:1024px) and (max-width:1269px){
