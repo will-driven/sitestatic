@@ -7753,7 +7753,9 @@ footer .footer-main {
     line-height: 1.58;
     letter-spacing: -.003em;
   }
-
+.featured-content-container {
+    width: 100%;
+}
 .featured-overlay {
     /* background-color: #F3A847; */
     color: #fff;
