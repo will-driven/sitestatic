@@ -11,14 +11,14 @@ body {
   font-size: 15px;
 }
 h1,h2,h3,h4,h5{
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
 }
 a, a:hover, .btn{outline:none!important;}
 .btn-search{background: #084251; border-color: #084251; color: #fff; padding: 7px 10px}
 .btn-search:hover{background: #084251; border-color: #084251}
 section{padding: 30px 0; float: left; width: 100%}
 .card{float: left; width:100%}
-.navbar {border: medium none; float: left; margin-bottom: 0px; width: 100%;  border-radius: 0}
+.navbar {border: medium none; float: left; margin-bottom: 0px; width: 100%;  border-radius: 0; text-transform: uppercase;letter-spacing: .05em!important;}
 .title-large {font-size: 20px; margin: 10px 0 5px; line-height: 27px; color: #141517;}
 .title-small { color: #141517; font-size: 16px; font-weight: 400; line-height: 23px; margin: 6px 0 0;}
 .title-x-small {font-size: 18px; margin: 0px;}
@@ -56,12 +56,20 @@ header{float: left; width:100%}
 .top-nav{background: #fff; padding: 0; border-bottom: 1px solid #dbdbdb}
 .top-nav .nav-link {padding-bottom: 0.7rem; padding-top: 0.7rem;}
 .top-nav .navbar-nav .nav-item + .nav-item{margin-left:0}
-.top-nav li a{color: #141517; text-transform: uppercase; font-size: 14px; font-weight: 700; padding: 0 10px; border-bottom: 2px solid #fff}
+.top-nav li a{color: #141517; text-transform: uppercase; font-size: 14px; font-weight: 700; padding: 0 10px;}
 .top-nav li a:hover, .top-nav li a:focus, .top-nav li.active a{color: #141517; border-bottom: 2px solid #F3A847 }
 .top-nav .form-control{border-color: #fff}
 .navbar-toggle{background: #fff;}
 .navbar-toggle .icon-bar{background:#0A2E61; }
 .navbar-brand{display: none;}
+
+@media only screen and (max-width: 450px) {
+  .navbar-brand {  display: block;}
+  
+}
+.navbar-brand img {
+  width: 100px; 
+}
 
 .top-slider .carousel-indicators{bottom: 0}
 .top-slider .carousel-indicators li{border:1px solid #000;}
@@ -80,7 +88,7 @@ header{float: left; width:100%}
 .search input {background: #d0d0d0; border: medium none; border-radius: 3px 0 0 3px; float: left; height: 36px; line-height: 18px; margin-left: 210px; padding: 0 9px; position: absolute; top: 4px; width: 0; -webkit-transition: all 0.7s ease-in-out; -moz-transition: all 0.7s ease-in-out;
 -o-transition: all 0.7s ease-in-out; transition: all 0.7s ease-in-out;}
 .search:hover input, .search input:focus { width: 200px; margin-left: 0px; background: #d0d0d0;}
-.top-nav .btn {position: absolute;right: 0;top: 4px;border-radius:3px;}
+.top-nav .btn {position: absolute;right: 0;    top: 4px; border-radius: 3px;  height: 36px;}
 
 .banner-sec{float: left; width:100%;}
 .banner-sec .news-block{margin-bottom: 20px}
@@ -93,7 +101,7 @@ header{float: left; width:100%}
 .section-01{float: left; width: 100%;  border-top: 1px solid #d5d5d5; border-bottom: 1px solid #d5d5d5}
 .section-01 .heading-large {border-bottom: 2px solid #222; color: #222; float: left; width: 100%; padding:0 0 6px; margin:0 0 18px; text-align: left;}
 .section-01 .heading-large::before, .section-01 .heading-large::after{background: transparent;}
-.section-01 .heading-small {border-bottom: 2px solid #222; color: #222; float: left; margin: 7px 0 0; width: 100%; padding-bottom: 10px; font-size: 18px }
+/* .section-01 .heading-small {border-bottom: 2px solid #222; color: #222; float: left; margin: 7px 0 0; width: 100%; padding-bottom: 10px; font-size: 18px } */
 .section-01 .title-small {margin-bottom: 5px; font-size:17px }
 .section-01 .news-block{border-bottom: 1px dashed #000; padding-bottom: 30px; border: none;}
 .section-01 aside > .news-block{border-bottom: 1px dashed #000; padding-bottom: 19px;}

@@ -36,7 +36,7 @@ paths = {
     img: src + '/**/img/*',
     html: [ src + '/*.html', src + '/**/*.html'],
     htmldist: [ dist + '/*.html', src + '/**/*.html'],
-    copyfiles: [ src + '/**/img/*', src + '/**/img/favicons.ico/*', src + '/*.html', src + '/**/*.html'],
+    copyfiles: [ src + '/**/img/*', src + '/**/img/favicons.ico/*'], //, src + '/*.html', src + '/**/*.html'],
     favicon: src + '/**/img/favicons.ico/*',
     scss: [ src +'/sass/*.scss',
             src +'/sass/**/* .scss',
@@ -199,14 +199,14 @@ gulp.task('watch', () => {
 
 //gulp.watch(paths.scss, ['minify-css']);
 //gulp.watch(paths.scss, ['uglify-html']);
-gulp.watch(src, ['clean-scripts']);
-gulp.watch(paths.copyfiles, ['optimize-image']);
-gulp.watch([paths.js, paths.css], ['revision']);
-gulp.watch([paths.js, paths.css], ['revreplace']);
-gulp.watch([paths.js, paths.css], ['revreplace_blog']);
-gulp.watch([paths.js, paths.css], ['revreplace_rsb']);
-gulp.watch([paths.js, paths.css], ['revreplace_ce']);
-gulp.watch(paths.jekyll, ['build-jekyll']);
+// gulp.watch(src, ['clean-scripts']);
+// gulp.watch(paths.copyfiles, ['optimize-image']);
+// gulp.watch([paths.js, paths.css], ['revision']);
+// gulp.watch([paths.js, paths.css], ['revreplace']);
+// gulp.watch([paths.js, paths.css], ['revreplace_blog']);
+// gulp.watch([paths.js, paths.css], ['revreplace_rsb']);
+// gulp.watch([paths.js, paths.css], ['revreplace_ce']);
+// gulp.watch(paths.jekyll, ['build-jekyll']);
 });
 
 // Start Everything with the default task

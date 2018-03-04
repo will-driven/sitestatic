@@ -7806,6 +7806,7 @@ footer .post p span { display:block; color:#a0a3a4; font-size: 12px;}
     float: left;
     width: 100%;
     background-color: #f8f8f8;
+    margin-bottom: 10px;
   }
 @media(min-width:1024px){
 	.featured-overlay-bottom{display:none}
