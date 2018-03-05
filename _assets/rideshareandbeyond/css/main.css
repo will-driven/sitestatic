@@ -103,7 +103,7 @@ img::-moz-selection {
 
 /* .navbar li a:hover, .navbar li a:focus, .navbar li.active a{color:#0C910E;} */
 
-.navbar-dark .navbar-nav .nav-item li.active a,
+.navbar-dark .navbar-nav .active,
 .navbar-dark .navbar-nav .nav-item a:hover,
 .navbar-dark .navbar-nav .nav-item a:focus{
   color:#0C910E;
