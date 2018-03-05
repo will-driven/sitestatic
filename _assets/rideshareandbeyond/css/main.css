@@ -493,6 +493,10 @@ footer .theme-by {
   bottom: 0;
   display: none;
 }
+.img-desc a {
+  color: #999;
+  text-decoration: none;
+}
 /* --- Post and page headers --- */
 
 .intro-header {
