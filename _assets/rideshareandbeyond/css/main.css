@@ -873,6 +873,14 @@ color: #f1c40f;
   margin-bottom: 0px;
 }
 
+.text h3 {
+  font-size: 21px!important;
+  line-height: 24px!important;
+  -webkit-transform: translateY(-1.88px);
+  transform: translateY(-1.88px);
+  letter-spacing: -.29px!important;
+}
+
 .heading-small {
   /* margin: 160px 0 0; */
   padding-bottom: 10px;
