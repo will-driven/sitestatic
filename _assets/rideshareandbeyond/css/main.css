@@ -478,6 +478,21 @@ footer .theme-by {
     float: left;
   }
 }
+
+.post-img-container {
+  position: relative;
+}
+.post-img-container .img-desc {
+  background: rgba(30, 30, 30, 0.6);
+  position: absolute;
+  padding: 5px 10px;
+  font-size: 10px;
+  color: #EEE;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
 /* --- Post and page headers --- */
 
 .intro-header {
