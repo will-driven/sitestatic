@@ -923,6 +923,10 @@ color: #f1c40f;
   color: inherit;
   text-decoration: none !important;
 }
+ .featured-overlay-bottom a {
+  color: inherit;
+  text-decoration: none !important;
+}
 .featured-overlay {
   /* background-color: #F3A847; */
   color: #fff;
