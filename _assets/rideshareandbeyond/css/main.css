@@ -100,7 +100,7 @@ img::-moz-selection {
  .navbar-dark .navbar-nav .nav-link {
   color:#28a745;
 }
-.navbar-dark .navbar-nav li.active a,
+.navbar-dark .navbar-nav li.active,
 .navbar-dark .navbar-nav .nav-item a:hover,
 .navbar-dark .navbar-nav .nav-item a:focus{
   color:#0C910E;
