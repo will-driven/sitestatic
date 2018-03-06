@@ -1005,3 +1005,40 @@ color: #f1c40f;
   letter-spacing: -.015em;
   padding-top: 5px!important;
 }
+
+.avatar-image--small {
+  width: 60px;
+  height: 60px;
+}
+
+.avatar-image {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.author {
+ text-decoration: none;
+}
+.author-bio {
+  --x-height-multiplier: 0.342!important;
+  --baseline-multiplier: 0.22!important;
+  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif!important;
+  letter-spacing: -.02em!important;
+  font-weight: 400!important;
+  font-style: normal!important;
+  letter-spacing: 0!important;
+  font-size: 13px!important;
+  line-height: 20px!important;
+  -webkit-transform: translateY(1.52px);
+  transform: translateY(1.52px);
+  padding-left: 10px;
+}
+.author-name {
+  color: rgba(0,0,0,.84)!important;
+}
+.author-title {
+  color: rgba(0,0,0,.54)!important;
+}
+
