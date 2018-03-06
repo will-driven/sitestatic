@@ -1041,4 +1041,8 @@ color: #f1c40f;
 .author-title {
   color: rgba(0,0,0,.54)!important;
 }
+.post-date {
+  font-size: 11px!important;
+  color: rgba(0,0,0,.54)!important;
+}
 
