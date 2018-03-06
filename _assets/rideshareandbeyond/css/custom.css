@@ -42,7 +42,7 @@ header{float: left; width:100%}
 .small-top .social-icon{float: right;}
 .small-top .social-icon a { color: #fff; float: left; padding: 6px 13px;}
 .small-top .social-icon a:last-child {border-right: 0x solid #fff;}
-.small-top .social-icon a:hover {color:#FD3A13; text-decoration: none;}
+.small-top .social-icon a:hover {color:#28a745; text-decoration: none;}
 .small-top .date-sec {font-size: 13px; font-weight: 600; float: left; margin-top: 4px; padding-left: 0; color: #898989}
 .top-head{background: #094654; width: 100%; float: left; height: 130px;}
 .top-head h1 {color: #fff; font-size: 36px; font-weight: 600; margin: 18px 0 0;}
