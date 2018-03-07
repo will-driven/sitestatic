@@ -118,6 +118,14 @@ img::-moz-selection {
 .nav-wrapper {
   height: 210px;
 }
+ 
+.nav-link {
+  padding: .5rem 1rem;
+  padding-left: 0rem;
+}
+.navbar {
+  padding-left: 0rem;
+}
 
 @media only screen and (max-width: 450px) {
   .logo img{  width: 200px; display: block; margin: 0 auto;}
@@ -129,6 +137,9 @@ img::-moz-selection {
   } */
   .nav-wrapper {
     height: 60px;
+  }
+  .navbar {
+    padding: .5rem 1rem;
   }
 }
 
@@ -1070,8 +1081,5 @@ color: #f1c40f;
   color: #eee;
 }
 
-.nav-link, .navbar {
-  padding: .5rem 1rem;
-  padding-left: 0px;
-}
+
 

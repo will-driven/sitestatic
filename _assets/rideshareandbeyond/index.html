@@ -69,7 +69,7 @@
 
     <link rel="stylesheet" href="{{site.asset_host}}rideshareandbeyond/css/lightbox.min.css" />
 
-    <link rel="stylesheet" href="{{site.asset_host}}base/css/loaders.css" />
+    <link rel="stylesheet" href="{{site.asset_host}}base/css/loaders.min.css" />
 
     <link rel="stylesheet" href="{{site.asset_host}}rideshareandbeyond/css/responsive-style.css" />
 
@@ -382,6 +382,7 @@
  <aside class="col-lg-3 side-bar col-md-12">
      <div class="row">
             <div class="col-md-12"><h4 class="heading-small">Videos</h4></div>
+            <div class="col-md-12">
         <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#latest" role="tab">Latest</a> </li>
                 <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Top</a> </li>
@@ -506,6 +507,7 @@
           </div>
               </div>
      </div>
+     </div>
               
       </aside>
 
@@ -608,8 +610,10 @@
       	  document.write("<script src='{{site.asset_host}}rideshareandbeyond/js/jquery-1.11.2.min.js'></script>")
       	}
       </script> -->
-    
-    <script src="{{site.asset_host}}base/js/jquery-3.3.1.min.js"></script>
+      <script src="{{site.asset_host}}base/js/jquery-3.3.1.min.js"></script>
+
+      <script src="{{site.asset_host}}base/js/bootstrap.min.js"></script>
+
   
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
@@ -617,7 +621,7 @@
 
     <script src="{{site.asset_host}}base/js/tether.min.js"></script>
     <!-- <script src="{{site.asset_host}}base/js/bootstrap.v4.4.min.js"></script> -->
-    <script src="{{site.asset_host}}base/js/bootstrap.min.js"></script>
+
 
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
@@ -633,16 +637,10 @@
   
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
-      <script>
-      	if (typeof jQuery == 'undefined') {
-      	  document.write('<script src="js/lightbox-plus-jquery.min.js"></scr' + 'ipt>');
-      	}
-      </script>
+     
     
-    <script src="{{site.asset_host}}rideshareandbeyond/js/lightbox-plus-jquery.min.js"></script>
-
-
-  
+    <script src="{{site.asset_host}}base/js/lightbox-plus-jquery.min.js"></script>
+ 
     <!-- <script>
         $(document).ready(function() {
             $(window).scroll(function() {
