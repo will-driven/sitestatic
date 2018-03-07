@@ -1051,9 +1051,7 @@ color: #f1c40f;
 
 .video-thumbnail {
   position: relative;
-  display: inline-block;
   cursor: pointer;
-  margin: 30px;
 }
 .video-thumbnail:before {
   position: absolute;
