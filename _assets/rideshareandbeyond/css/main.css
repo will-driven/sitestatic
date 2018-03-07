@@ -1045,4 +1045,7 @@ color: #f1c40f;
   color: rgba(0,0,0,.54)!important;
 }
 
+.media-body {
+  padding-left: 10px;
+}
 
