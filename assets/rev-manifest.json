@@ -16,6 +16,7 @@
   "base/js/jquery-1.11.2.min.js": "base/js/jquery-1-9aecea3830.11.2.min.js",
   "base/js/jquery-1.11.3.min.js": "base/js/jquery-1-f03e5a3bf5.11.3.min.js",
   "base/js/jquery-3.3.1.min.js": "base/js/jquery-3-a09e13ee94.3.1.min.js",
+  "base/js/jquery.timeago.js": "base/js/jquery-83cd5c4f15.timeago.js",
   "base/js/lightbox-plus-jquery.min.js": "base/js/lightbox-plus-jquery-85b4b81c0b.min.js",
   "base/js/particles.min.js": "base/js/particles-08bd8ed926.min.js",
   "base/js/tether.min.js": "base/js/tether-df4c4d96cf.min.js",
