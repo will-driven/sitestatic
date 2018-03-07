@@ -915,6 +915,7 @@ color: #f1c40f;
   -webkit-transform: translateY(-1.88px);
   transform: translateY(-1.88px);
   letter-spacing: -.29px!important;
+  color: #000;
 }
 
 .heading-small {
@@ -992,6 +993,9 @@ color: #f1c40f;
   width: 100%;
   background-color: #f8f8f8;
   margin-bottom: 10px;
+}
+.featured-overlay-bottom h3{
+  color: #000;
 }
 @media(min-width:1024px){
 .featured-overlay-bottom{display:none}
