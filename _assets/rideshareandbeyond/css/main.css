@@ -881,7 +881,9 @@ color: #f1c40f;
 }
 .card-comment {
   float: right;
+  font-size: 12px;
 }
+
 .image {
   height: 200px;
   opacity: .7;
