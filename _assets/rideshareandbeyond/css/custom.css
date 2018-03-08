@@ -159,6 +159,8 @@ footer .footer-ul li a:hover {transition: color 0.2s linear 0s, background 0.2s 
 footer .social-icons i{background: #fff none repeat scroll 0 0; border-radius: 50%; color: #141517; padding: 8px 10px; margin-bottom: 10px;}
 footer p{color: #a0a3a4; font-size: 14px;}
 footer p span{color: #fff;}
+footer  a {  color: #FFF;   text-decoration: none;}
+footer  a:hover { color: #8f8f8f; text-decoration: none;}
 footer .heading-footer { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
 footer .post p { font-size:14px; color:#FFF; line-height:20px;}
 footer .post p span { display:block; color:#8f8f8f; font-size: 12px;}
