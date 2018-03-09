@@ -1037,6 +1037,11 @@ color: #f1c40f;
 
 .author {
  text-decoration: none;
+ margin-bottom: 20px;
+}
+
+.video-block {
+  margin-bottom: 20px;
 }
 .author-bio {
   --x-height-multiplier: 0.342!important;
