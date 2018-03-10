@@ -71,6 +71,8 @@
 
     <link rel="stylesheet" href="{{site.asset_host}}base/css/loaders.min.css" />
 
+    
+
     <link rel="stylesheet" href="{{site.asset_host}}rideshareandbeyond/css/responsive-style.css" />
 
   
@@ -138,11 +140,11 @@
 
     
 
- <div class="loader loader-bg">
+ <!-- <div class="loader loader-bg">
         <div class="loader-inner ball-pulse-rise">
          
         </div>
-      </div>
+      </div> -->
 <header>
         <!-- <div class="small-top">
                 <div class="container">
@@ -542,9 +544,7 @@
   
 
 
-
-
-
+       
     <footer>
         <div class="container">
     <div class="row">
@@ -596,7 +596,7 @@
       </div>-->
   
     
-
+  
 
 
 
@@ -610,11 +610,11 @@
       	  document.write("<script src='{{site.asset_host}}rideshareandbeyond/js/jquery-1.11.2.min.js'></script>")
       	}
       </script> -->
-      <script src="{{site.asset_host}}base/js/jquery-1.11.3.min.js"></script>
+      <script src="{{site.asset_host}}base/js/jquery-3.3.1.min.js"></script>
 
       <script src="{{site.asset_host}}base/js/bootstrap.min.js"></script>
 
-  
+
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
     <!-- <script src="{{site.asset_host}}base/js/bootstrap.min.js"></script> -->
@@ -624,14 +624,14 @@
 
 
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
-    
-	
+
+	<!-- <script src="{{site.asset_host}}base/js/main.js"></script> -->
     
     <script src="{{site.asset_host}}rideshareandbeyond/js/main.js"></script>
-  
+
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
-	
+
     
     <script src="{{site.asset_host}}rideshareandbeyond/js/core.js"></script>
   
@@ -665,17 +665,7 @@
 	</script>
 	<!-- End Google Analytics -->
 
-  <script>
-      $(document).ready(function() {
-          $( "nav li" ).each(function() {
-            if (this.id == 'home') {
-              $(this).addClass('active');
-           }else {
-              $(this).removeClass('active');
-           }
-          });
-      });
-  </script>
+  
   
   </body>
 </html>
