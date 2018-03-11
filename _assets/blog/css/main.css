@@ -118,6 +118,8 @@ img::-moz-selection {
   color:white;
 } */
 
+.navbar-logo { display: none;}
+
 .nav-wrapper {
   height: 210px;
 }
@@ -134,6 +136,7 @@ img::-moz-selection {
   .logo img{  width: 200px; display: block; margin: 0 auto;}
   .sticky-logo { display: none;}
   header { display: none;}
+  .navbar-logo { display: block;}
   .bg-light{background-color: #F5F5F5!important; }
   /* .navbar-dark .navbar-nav .nav-link {
     color: #28a745;
