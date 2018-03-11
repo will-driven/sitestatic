@@ -82,6 +82,9 @@ img::-moz-selection {
   background: transparent;
 }
 
+.logo {
+  z-index: 2;
+}
  .logo img{
   width: 200px; 
 }
