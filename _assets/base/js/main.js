@@ -7,13 +7,37 @@ var main = {
 
   init : function() {
     // Shorten the navbar after scrolling a little bit down
+    // $(window).scroll(function() {
+    //     if ($(".navbar").offset().top > 150) {
+    //         $(".navbar").addClass("top-nav-short");
+    //     } else {
+    //         $(".navbar").removeClass("top-nav-short");
+    //     }
+    // });
+
     $(window).scroll(function() {
-        if ($(".navbar").offset().top > 50) {
-            $(".navbar").addClass("top-nav-short");
-        } else {
-            $(".navbar").removeClass("top-nav-short");
-        }
-    });
+      if( $(this).scrollTop() > 160 && $("header").css("display") == "block" ) {
+          $(".navbar").addClass("fixed-top");
+          $(".navbar").addClass("sticky-nav");
+          // $(".navbar-dark .navbar-nav .nav-link").css({"color": "#fff"});
+          $('.navbar-brand').show();
+          // $(".top-nav li a").css({"border-bottom": "#094654"});
+        } else if( $("header").css("display") == "none" ) {
+          $(".navbar").addClass("fixed-top");
+          $(".navbar").addClass("sticky-nav");
+          // $(".navbar-dark .navbar-nav .nav-link").css({"color": "#fff"});
+          $('.navbar-brand').show();
+          // $(".top-nav li a").css({"border-bottom": "#fff"});
+
+      } else {
+          $(".navbar").removeClass("fixed-top");
+          $(".navbar").removeClass("sticky-nav");
+          // $(".navbar-dark .navbar-nav .nav-link").css({"color": "#094654"});
+          $('.navbar-brand').hide();
+          // $(".top-nav li a").css({"border-bottom": "#fff"});
+
+      }
+  });
     
     // On mobile, hide the avatar when expanding the navbar menu
     $('#main-navbar').on('show.bs.collapse', function () {
@@ -131,16 +155,6 @@ var main = {
 	  $(".img-desc").hide();  
 	}
   }
+  
 };
-
-// 2fc73a3a967e97599c9763d05e564189
-
-document.addEventListener('DOMContentLoaded', main.init);
-
-if ((".loader").length) {
-  // show Preloader until the website ist loaded
-  $(window).on('load', function () {
-    $(".loader").fadeOut("slow");
-  });
-}
 
