@@ -59,6 +59,7 @@ header{float: left; width:100%;}
 .top-nav li a{color: #141517; text-transform: uppercase; font-size: 14px; font-weight: 700; padding: 0 10px;}
 .top-nav li a:hover, .top-nav li a:focus, .top-nav li.active a{color: #141517; border-bottom: 2px solid #F3A847 }
 .top-nav .form-control{border-color: #fff}
+
 .navbar-toggle{background: #fff;}
 .navbar-toggle .icon-bar{background:#0A2E61; }
 .navbar-brand{display: none;}
@@ -240,6 +241,7 @@ max-width: 25%; height: 200px; align-items: center; justify-content: center;}
   padding-left: 0rem;
 }
 
+
 @media only screen and (max-width: 450px) {
   .logo img{  width: 200px; display: block; margin: 0 auto;}
   .sticky-logo { display: none;}
@@ -256,6 +258,14 @@ max-width: 25%; height: 200px; align-items: center; justify-content: center;}
     padding: .5rem 1rem;
   }
 }
+
+.btn-outline-success {
+  color: #404040;
+  background-color: transparent;
+  border-color: #404040;
+}
+
+.btn-outline-success:hover{background: #404040; border-color: #8f8f8f; color: #fff}
 
 #particles-js {
   position: absolute;
