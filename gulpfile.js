@@ -20,7 +20,8 @@ browserSync  = require('browser-sync').create(),
 connect = require('gulp-connect'),
 revDel = require('rev-del'),
 del = require('del'),
-cp = require('child_process');
+cp = require('child_process'),
+run    = require('gulp-run');
 
 // Set the path variables
 const base_path = './',
@@ -44,7 +45,9 @@ paths = {
     jekyll: ['index.html', '_posts/*', '_layouts/*', '_includes/*' , 'assets/*', 'assets/**/*']
 };
 
-
+var config = {
+  drafts:     !!gutil.env.drafts      // pass --drafts flag to serve drafts
+};
 // // Compile sass to css
 // gulp.task('compile-sass', () => {  
 // return gulp.src(paths.scss)
@@ -177,13 +180,23 @@ gulp.task("revreplace_blog", ["revision"], function(){
       //.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); });
   });
 
-// Rebuild Jekyll
-gulp.task('build-jekyll', ['revreplace'], (code) => {
-return cp.spawn('jekyll.bat', ['build', '--incremental'], { stdio: 'inherit' }) // Adding incremental reduces build time.
-//.on('error', (error) => gutil.log(gutil.colors.red(error.message)))
-.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-.on('close', code);
-})
+// // Rebuild Jekyll
+// gulp.task('build-jekyll', ['revreplace'], (code) => {
+// return cp.spawn('jekyll.bat', ['build', '--incremental'], { stdio: 'inherit' }) // Adding incremental reduces build time.
+// //.on('error', (error) => gutil.log(gutil.colors.red(error.message)))
+// .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+// .on('close', code);
+// })
+
+// Runs Jekyll build
+gulp.task('build-jekyll', ['revreplace'], function() {
+  var shellCommand = 'bundle exec jekyll build  --incremental --config _config.yml';
+  if (config.drafts) { shellCommand += ' --drafts'; };
+
+  return gulp.src('')
+    .pipe(run(shellCommand))
+    .on('error', gutil.log);
+});
 
 // Setup Server
 gulp.task('server', () => {
