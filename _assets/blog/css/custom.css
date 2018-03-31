@@ -281,3 +281,24 @@ max-width: 25%; height: 200px; align-items: center; justify-content: center;}
 }
 
 
+.yml .pln {
+  color: #0086B3;
+}
+.yml  .c-str .pln {
+  color: #EC7600;
+}
+.yml  .c-str  .com {
+  color: #EC7600;
+}
+
+.yml  .c-str  .kwd {
+  color: #EC7600;
+}
+.yml  .c-str  .pun {
+  color: #EC7600;
+}
+
+li.L0, li.L1, li.L2, li.L3,
+li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: decimal !important;
+}
