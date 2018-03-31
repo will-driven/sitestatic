@@ -936,6 +936,7 @@ color: #f1c40f;
 .post-wrapper {
   font-family: Georgia,Cambria,"Times New Roman",Times,serif;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .post-content {
   --x-height-multiplier: 0.375;
