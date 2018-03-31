@@ -27,7 +27,7 @@ run    = require('gulp-run');
 const base_path = './',
 src = base_path + '_assets', //'_dev/src',
 dist = base_path + 'assets',
-blog_main = 'Z:/mesfinmoges On My Mac/Projects/blogs/Personal',
+blog_main = 'Z:/mesfinmoges On My Mac/Projects/blogs/blog.mesfinmoges',
 rsb_main = 'Z:/mesfinmoges On My Mac/Projects/blogs/blog.rideshareAndBeyond',
 ce_main = 'Z:/mesfinmoges On My Mac/Projects/blogs/blog.cleaneatingforlife',
 
