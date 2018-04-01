@@ -298,6 +298,29 @@ max-width: 25%; height: 200px; align-items: center; justify-content: center;}
   color: #EC7600;
 }
 
+.cmd .pln {
+  color: #F1F2F3;
+}
+.cmd  .c-str .pln {
+  color: #F1F2F3;
+}
+.cmd  .c-str  .com {
+  color: #F1F2F3;
+}
+
+.cmd  .c-str  .kwd {
+  color: #F1F2F3;
+}
+.cmd  .c-str  .pun {
+  color: #F1F2F3;
+}
+.cmd  .c-str  .str {
+  color: #F1F2F3;
+}
+.cmd  .c-str  .typ {
+  color: #F1F2F3;
+}
+
 li.L0, li.L1, li.L2, li.L3,
 li.L5, li.L6, li.L7, li.L8 {
   list-style-type: decimal !important;
