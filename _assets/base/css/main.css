@@ -29,14 +29,14 @@ a:hover,
 a:focus {
   color: #0085a1;
 }
-blockquote {
+/* blockquote {
   color: #808080;
   font-style: italic;
 }
 blockquote p:first-child {
   margin-top: 0;
   
-}
+} */
 hr.small {
   max-width: 100px;
   margin: 15px auto;
@@ -1094,3 +1094,24 @@ color: #f1c40f;
   color: #eee;
 }
 
+
+/* blockquote */
+blockquote {
+  margin-top: 29px;
+  --x-height-multiplier: 0.375;
+  --baseline-multiplier: 0.17;
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  letter-spacing: .01rem;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+  border-left: 3px solid rgba(0,0,0,.84);
+  padding-left: 20px;
+  margin-left: -23px;
+  /* padding-bottom: 2px; */
+  margin: 0;
+  margin-top: 0px;
+  margin-left: 0px;
+}
