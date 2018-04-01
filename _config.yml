@@ -39,6 +39,8 @@ imgSize300: ""
 imgSize200: ""
 imgSize100: ""
 
+syntax-highlighter: true
+
 # Build settings
 markdown: kramdown
 theme: minima
