@@ -221,21 +221,5 @@ max-width: 25%; height: 200px; align-items: center; justify-content: center;}
 
 /* blockquote */
 blockquote {
-  margin-top: 29px;
-  --x-height-multiplier: 0.375;
-  --baseline-multiplier: 0.17;
-  font-family: Georgia,Cambria,"Times New Roman",Times,serif;
-  letter-spacing: .01rem;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 21px;
-  line-height: 1.58;
-  letter-spacing: -.003em;
   border-left: 3px solid #FDA213;
-  padding-left: 20px;
-  margin-left: -23px;
-  /* padding-bottom: 2px; */
-  margin: 0;
-  margin-top: 0px;
-  margin-left: 0px;
 }
