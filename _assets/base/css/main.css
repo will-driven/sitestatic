@@ -1115,3 +1115,7 @@ blockquote {
   margin-top: 0px;
   margin-left: 0px;
 }
+
+blockquote .disc {
+  font-size: 16px;
+}
