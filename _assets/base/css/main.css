@@ -1119,3 +1119,56 @@ blockquote {
 .disc {
   font-size: 16px;
 }
+
+/* alerts */
+.alert p {
+  margin: 0;
+  margin-top: 8px;
+  max-width: 100%;
+}
+
+.alert.NOTE p:first-child, .alert.note p:first-child {
+  font-family: segoe-ui_semibold,Segoe UI Semibold,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+  color: #006d8c;
+}
+.alert.NOTE p, .alert.note p {
+  font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+}
+.alert p:first-child {
+  font-family: segoe-ui_semibold,Segoe UI Semibold,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 0;
+}
+
+
+.alert.NOTE, .alert.note {
+  background-color: #d9f6ff;
+  border-color: #bff1ff;
+  color: inherit;
+}
+
+.alert.TIP, .alert.tip {
+  background-color: #e9faf5;
+  border-color: #cfebe3;
+  color: inherit;
+}
+.alert {
+  display: block;
+  border-radius: 6px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  padding: 16px;
+  position: relative;
+  margin-top: 16px;
+  background-color: #f2f4f5;
+  border-color: #f2f4f5;
+  color: #000;
+}
